@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: sans-serif;
+}
+
+.main {
+  /* box modeling properties */
+  border: 2px solid black;
+  background: royalblue;
+  color: white;
+  width: 50vw;
+  max-width: 500px;
+}
+
+.main-image {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    background: goldenrod;
+    color: black;
+  }
+
+  .main-title {
+    font-family: fantasy;
+  }
+}
