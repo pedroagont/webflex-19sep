@@ -1,31 +1,29 @@
-puts 'hi!'
-# implicit returns
-# cannot pass methods as callbacks
-# math operatos = methods (2+2 ===> add(2,2))
-
-def say_hello name
-    puts "hello #{name}"
+# writing our own methods
+def say_hello(name) # starts with a definition
+  puts "Hello #{name}!"
 end
 
+# invoke with or without parens
 say_hello 'Pedro'
-say_hello('Bob')
+say_hello('Pedro')
+# calling a method with too many/too few arguments will result in an error
+# say_hello('Pedro', 'Zahra')
 
-# say_hello('Foo', 'Bar', 'Baz')
-
-
-def full_name(first, last)
-    "#{first} #{last}"
+# methods in ruby have implicit return
+def full_name(first_name, last_name)
+  "#{first_name} #{last_name}"
 end
 
-full_name_var = full_name('Bob', 'Vance')
-puts full_name_var
+result = full_name('Pedro', 'González')
+puts result
 
-def change_it val
-    val = 5
+# arguments are passed by value
+def change_value(val)
+  val = 5
 end
 
-num = 10
-puts num
+number = 10
+puts number
 
-change_it(num)
-puts num
+change_value(number)
+puts number
